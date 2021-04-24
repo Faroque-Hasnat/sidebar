@@ -1,0 +1,90 @@
+* {
+   margin: 0;
+   padding: 0;
+   outline: 0;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+}
+
+section#sidebar .sidenav {
+   background-color: rgba(0,0,0,.9);
+   height: 100%;
+   width: 20vw;
+   left: -20vw;
+   position: fixed;
+   transition: all .5s ease;
+   z-index: 1;
+}
+
+section#sidebar .sidenav h1 {
+   color: #fff;
+   font-size: 2vw;
+   line-height: 5vw;
+   text-align: center;
+}
+
+section#sidebar .sidenav li {
+   border-top: 1px solid rgba(255,255,255,.1);
+   padding-left: 3vw;
+   border-bottom: 1px solid black;
+   transition: all .3s ease;
+}
+
+section#sidebar .sidenav li:hover {
+   padding-left: 3.8vw;
+}
+
+section#sidebar .sidenav li a {
+   color: #fff;
+   display: block;
+   line-height: 8vh;
+   font-size: 1.3vw;
+}
+
+section#sidebar .sidenav li a i {
+   margin-right: 2vw;
+}
+
+section#sidebar #check {
+   display: none;
+}
+
+section#sidebar #open {
+   top: 5vh;
+   left: 5vw;
+   padding: 4px 10px;
+   cursor: pointer;
+   color: #fff;
+   font-size: 2vw;
+   position: fixed;
+   background-color: black;
+   transition: all .5s ease;
+}
+
+section#sidebar #cancel {
+   top: 5vh;
+   left: -21vw;
+   padding: 4px 8px;
+   cursor: pointer;
+   color: #fff;
+   font-size: 1.5vw;
+   position: fixed;
+   background-color: black;
+   transition: all .43s ease;
+   
+}
+
+#check:checked ~ .sidenav {
+   left: 0;
+}
+
+#check:checked ~ label #open {
+   left: 20vw;
+   opacity: 0;
+   pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+   left: 21vw;
+}
