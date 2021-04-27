@@ -5,6 +5,8 @@
    text-decoration: none;
    box-sizing: border-box;
    font-family: 'Roboto', sans-serif;
+   list-style: none;
+   letter-spacing: 2px;
 }
 
 section#sidebar .sidenav {
@@ -20,19 +22,14 @@ section#sidebar .sidenav {
 section#sidebar .sidenav h1 {
    color: #fff;
    font-size: 2vw;
-   line-height: 5vw;
+   line-height: 8vw;
    text-align: center;
+   user-select: none;
 }
 
 section#sidebar .sidenav li {
    border-top: 1px solid rgba(255,255,255,.1);
-   padding-left: 3vw;
    border-bottom: 1px solid black;
-   transition: all .3s ease;
-}
-
-section#sidebar .sidenav li:hover {
-   padding-left: 3.8vw;
 }
 
 section#sidebar .sidenav li a {
@@ -40,6 +37,16 @@ section#sidebar .sidenav li a {
    display: block;
    line-height: 8vh;
    font-size: 1.3vw;
+   padding-left: 3vw;
+   transition: all .3s ease;
+}
+
+/* section#sidebar .sidenav li a.active {
+   padding-left: 4vw;
+} */
+
+section#sidebar .sidenav li a:hover, section#sidebar .sidenav li a.active {
+   padding-left: 4vw;
 }
 
 section#sidebar .sidenav li a i {
@@ -63,7 +70,7 @@ section#sidebar #open {
 }
 
 section#sidebar #cancel {
-   top: 5vh;
+   top: 5.3vh;
    left: -21vw;
    padding: 4px 8px;
    cursor: pointer;
@@ -87,4 +94,40 @@ section#sidebar #cancel {
 
 #check:checked ~ label #cancel {
    left: 21vw;
+}
+
+#check:checked ~ #main {
+   margin-left: 20vw;
+}
+
+section#main {
+   background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url(https://i.postimg.cc/RVH9pNJ5/top-view-fast-food-mix-hamburger-doner-sandwich-chicken-nuggets-rice-vegetable-salad-chicken-sticks.jpg);
+   background-position: center;
+   background-size: cover;
+   height: 100vh;
+   background-repeat: no-repeat;
+   transition: all .5s ease;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+section#main > div {
+   text-align: start;
+   padding: 10vh 10vw;
+   background: linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.25));
+}
+
+section#main a {
+   color: #000;
+   font-size: 1.5vw;
+   display: block;
+   padding: 1.5vh 1vw;
+   border-radius: 4px;
+   font-weight: 450;
+}
+
+section#main a.active {
+   background: #fff;
 }
